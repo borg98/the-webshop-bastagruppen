@@ -1,5 +1,5 @@
 import { Product } from "../../../modules/product";
-import { createHtml } from "./createHtml";
+import { createHtml } from "./createhtml";
 import { sortOnId, sortPriceDecr, sortPriceIncr } from "./sortTypes";
 
 export function sortProducts(list: Product[], container: HTMLDivElement) {
