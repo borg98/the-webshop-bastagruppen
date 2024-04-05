@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Group 9 - Products</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="logo-cart-container">
+        <h1 class="logo"><a class="logo" href="../index.html">G9</a></h1>
+        <div class="shopping-cart-container">
+          <a class="material-symbols-outlined" id="shopping-cart-icon">
+            shopping_cart
+          </a>
+          <div class="cartmenu-container">
+            <div class="cartmenu-container__top">
+              <span
+                class="cartmenu-container__amount"
+                id="cartMenuIndex"
+              ></span>
+              <a class="material-symbols-outlined" id="close-icon"> close </a>
+            </div>
+            <div class="container-box__inventory" id="productInventory"></div>
+            <div class="summary-box">
+              <div class="summary-box__container">
+                <p>Total Amount SEK</p>
+                <p id="totalPrice"></p>
+              </div>
+              <a class="checkout-button" href="/pages/yourcart.html"
+                >Checkout
+              </a>
+            </div>
+          </div>
+
+          <span class="cart-index" id="cartIndex"></span>
+        </div>
+      </div>
+      <header class="topnav">
+        <div class="menu">
+          <a class="menu-item" href="./productPage.html">Latest arrival</a>
+          <a class="menu-item" href="./productPage.html">Shop</a>
+          <a class="menu-item" href="#footer">About us</a>
+        </div>
+      </header>
+      <div class="modal" tabindex="-1" role="dialog" id="productModal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalTitle"></h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+            <div class="modal-footer" id="modalFooter">
+              <div id="optionContainer">
+                <select name="size" id="sizeSelect"></select>
+                <select name="color" id="colorSelect"></select>
+              </div>
+              <div class="buttonConatiner">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="addToCartBtn"
+                  data-dismiss="modal"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" tabindex="-1" role="dialog" id="addedToCart">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalTitle">Wheey!</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="modalBody">Product added to cart!</div>
+          </div>
+        </div>
+      </div>
+      <select name="sort" id="sortSelect" class="sortSelect">
+        <option value="standard">Standard</option>
+        <option value="incr">Price low to high</option>
+        <option value="decr">Price high to low</option>
+      </select>
+      <div id="app"></div>
+      <script type="module" src="/src/ts/productMain.ts"></script>
+      <script
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"
+      ></script>
+      <footer id="footer">
+        <div class="footer-container">
+          <ul>
+            <li class="footer-container__head">FIND US HERE</li>
+            <li>Group 9,<br />Stockholm,<br />Sweden</li>
+          </ul>
+          <ul>
+            <li class="footer-container__head">FOLLOW US</li>
+            <li>Instagram</li>
+            <li>Twitter</li>
+            <li>Youtube</li>
+            <li>LinkedIn</li>
+          </ul>
+          <ul>
+            <li class="footer-container__head">MENU</li>
+            <li><a href="../index.html">Home</a></li>
+            <li>About us</li>
+            <li><a href="./productPage.html">Products</a></li>
+          </ul>
+          <div class="footer-container__side">
+            <h2 class="footer-container__logo-text">G9</h2>
+            <p>© 2024 All Rights Reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="/src/ts/main.ts"></script>
+  </body>
+</html>

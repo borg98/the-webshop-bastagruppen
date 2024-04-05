@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../src/scss/cartstyling.scss" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Group 9 - Cart</title>
+    <link rel="stylesheet" href="../src/scss/style.scss" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="logo-cart-container">
+      <h1 class="logo"><a class="logo" href="../index.html">G9</a></h1>
+
+      <div class="shopping-cart-container">
+        <a
+          class="material-symbols-outlined"
+          id="shopping-cart-icon"
+          href="./yourcart.html"
+        >
+          shopping_cart
+        </a>
+
+        <span class="cart-index" id="cartIndex"></span>
+      </div>
+    </div>
+    <header class="topnav">
+      <div class="menu">
+        <a class="menu-item" href="./productPage.html">Latest arrival</a>
+        <a class="menu-item" href="./productPage.html">Shop</a>
+        <a class="menu-item" href="#">About us</a>
+      </div>
+    </header>
+    <main>
+      <section class="container-box">
+        <h3 class="mainCartTitle">Your cart</h3>
+        <div class="container-box__inventory" id="productInventory"></div>
+        <div class="container-box__summary">
+          <div class="summary-box">
+            <div class="resultContainer">
+              <p>Total products:</p>
+              <span id="cartMenuIndex"></span>
+            </div>
+            <div class="resultContainer">
+              <p>Subtotal:</p>
+              <span id="totalPrice"></span>
+            </div>
+          </div>
+          <a class="checkout-button" href="./checkout.html">Checkout </a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <ul>
+          <li class="footer-container__head">FIND US HERE</li>
+          <li>Group 9,<br />Stockholm,<br />Sweden</li>
+        </ul>
+        <ul>
+          <li class="footer-container__head">FOLLOW US</li>
+          <li>Instagram</li>
+          <li>Twitter</li>
+          <li>Youtube</li>
+          <li>LinkedIn</li>
+        </ul>
+        <ul>
+          <li class="footer-container__head">MENU</li>
+          <li><a href="../index.html">Home</a></li>
+          <li>About us</li>
+          <li><a href="productPage.html">Products</a></li>
+        </ul>
+        <div class="footer-container__side">
+          <h2 class="footer-container__logo-text">G9</h2>
+          <p>© 2024 All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="../src/ts/cartMain.ts" type="module" defer></script>
+    <script type="module" src="../src/ts/main.ts"></script>
+  </body>
+</html>

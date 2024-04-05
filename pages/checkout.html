@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="logo-cart-container">
+      <h1 class="logo"><a href="../index.html" class="logo">G9</a></h1>
+
+      <div class="shopping-cart-container">
+        <a
+          class="material-symbols-outlined"
+          id="shopping-cart-icon"
+          href="./yourcart.html"
+        >
+          shopping_cart
+        </a>
+
+        <span class="cart-index" id="cartIndex"></span>
+      </div>
+    </div>
+    <header class="topnav">
+      <div class="menu">
+        <a class="menu-item" href="./productPage.html">Latest arrival</a>
+        <a class="menu-item" href="./productPage.html">Shop</a>
+        <a class="menu-item" href="#footer">About us</a>
+      </div>
+    </header>
+    <section class="main-container">
+      <h3 class="main-container__title">Order details</h3>
+      <section class="form-container" id="formContainer">
+        <form action="submit" class="form-container__form">
+          <input
+            class="form-container__form__input form-container__form__input--wide"
+            type="text"
+            placeholder="Förnamn"
+            id="firstname"
+            required
+          />
+          <input
+            class="form-container__form__input form-container__form__input--wide"
+            type="text"
+            placeholder="Efternamn"
+            id="lastname"
+            required
+          />
+          <input
+            class="form-container__form__input form-container__form__input--wide"
+            type="text"
+            placeholder="Gatuadress"
+            id="street"
+            required
+          />
+          <input
+            class="form-container__form__input form-container__form__input--narrow"
+            type="number"
+            placeholder="Postnummer"
+            id="zip"
+            maxlength="5"
+            required
+          />
+          <input
+            class="form-container__form__input form-container__form__input--narrow"
+            type="text"
+            placeholder="Ort"
+            id="city"
+            required
+          />
+          <div
+            id="paymentContainer"
+            class="form-container__form__payment-label-container"
+          >
+            <div
+              class="form-container__form__paymentContainer__credit-container"
+            >
+              <label for="credit">Credit card </label>
+              <input name="credit" id="credit" type="checkbox" />
+            </div>
+            <div
+              class="form-container__form__paymentContainer__invoice-container"
+            >
+              <label for="faktura">Invoice </label>
+              <input name="faktura" id="faktura" type="checkbox" />
+            </div>
+          </div>
+          <div
+            class="form-container__form__payment-container hidden"
+            id="paymentDisplay"
+          >
+            <input
+              class="form-container__form__input form-container__form__input--wide"
+              placeholder="Kortnumer"
+              inputmode="numeric"
+              pattern="[0-9\s]{13,19}"
+              autocomplete="cc-number"
+              maxlength="19"
+              placeholder="xxxx xxxx xxxx xxxx"
+              required
+            />
+            <div
+              class="form-container__form__payment-container__cardDate-container"
+            >
+              <select
+                class="form-container__form__payment-container__cardDate-container__select"
+              >
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+              <p>/</p>
+              <select
+                class="form-container__form__payment-container__cardDate-container__select"
+              >
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+                <option value="32">32</option>
+                <option value="33">33</option>
+                <option value="34">34</option>
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+              </select>
+            </div>
+            <input
+              class="form-container__form__input form-container__form__input--narrow"
+              type="number"
+              placeholder="CCV"
+              maxlength="3"
+            />
+          </div>
+          <button
+            type="submit"
+            class="form-container__form__button hidden"
+            id="orderButton"
+          >
+            Order
+          </button>
+        </form>
+      </section>
+    </section>
+    <footer id="footer">
+      <div class="footer-container">
+        <ul>
+          <li class="footer-container__head">FIND US HERE</li>
+          <li>Group 9,<br />Stockholm,<br />Sweden</li>
+        </ul>
+        <ul>
+          <li class="footer-container__head">FOLLOW US</li>
+          <li>Instagram</li>
+          <li>Twitter</li>
+          <li>Youtube</li>
+          <li>LinkedIn</li>
+        </ul>
+        <ul>
+          <li class="footer-container__head">MENU</li>
+          <li><a href="../index.html">Home</a></li>
+          <li>About us</li>
+          <li><a href="productPage.html">Products</a></li>
+        </ul>
+        <div class="footer-container__side">
+          <h2 class="footer-container__logo-text">G9</h2>
+          <p>© 2024 All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/src/ts/checkoutMain.ts"></script>
+  </body>
+</html>
