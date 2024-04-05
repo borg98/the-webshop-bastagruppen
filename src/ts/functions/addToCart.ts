@@ -1,7 +1,7 @@
 import { cart } from "../../../modules/newCart";
 import { Product } from "../../../modules/product";
 import { saveToLs } from "./localStorage";
-import { CartProduct } from "../../../modules/cartProduct";
+import { CartProduct } from "../../../modules/CartProduct";
 import { findProductIndex } from "./findProductIndex";
 
 export function addToCart(product: Product) {

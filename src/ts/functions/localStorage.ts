@@ -1,4 +1,4 @@
-import { CartProduct } from "../../../modules/cartProduct";
+import { CartProduct } from "../../../modules/CartProduct";
 
 export function saveToLs(cart: CartProduct[]) {
   localStorage.setItem("cart", JSON.stringify(cart));
