@@ -6,6 +6,7 @@ export class CartProduct {
     public price: number,
     public img: string,
     public size: string,
-    public color: string
+    public color: string,
+    public brand?: string
   ) {}
 }
