@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && cp -r pages dist/",
+    "build": "tsc && vite build && cp -r pages dist/ && cp -r src/scss dist/",
     "preview": "vite preview"
   },
   "devDependencies": {
