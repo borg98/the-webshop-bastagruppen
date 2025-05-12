@@ -16,6 +16,11 @@ export default defineConfig({
         yourcart: path.resolve(__dirname, "pages/yourcart.html"),
         checkout: path.resolve(__dirname, "pages/checkout.html"),
       },
+      output: {
+        entryFileNames: "assets/[name].js",
+        chunkFileNames: "assets/[name].js",
+        assetFileNames: "assets/[name].[ext]",
+      },
     },
   },
 });
